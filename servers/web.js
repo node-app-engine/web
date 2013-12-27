@@ -17,6 +17,7 @@
 var koa = require('koa');
 var http = require('http');
 var logger = require('../common/logger');
+var rt = require('koa-rt');
 var config = require('../config');
 
 var app = koa();
@@ -25,6 +26,8 @@ app.name = 'nae-web';
 app.outputErrors = config.debug;
 app.keys = config.cookieKeys;
 app.proxy = true; // to support `X-Forwarded-*` header
+
+app.use(rt());
 
 app.use(function *() {
   this.body = 'Hello NAE';

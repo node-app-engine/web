@@ -5,7 +5,7 @@
   "main": "dispatch.js",
   "scripts": {
     "test": "make test",
-    "start": "node --harmony-generators dispatch.js"
+    "start": "node_modules/.bin/gnode dispatch.js"
   },
   "config": {
     "blanket": {
@@ -18,16 +18,17 @@
   "dependencies": {
     "graceful": "0.0.5",
     "koa": "0.1.2",
+    "koa-rt": "0.0.1",
     "logfilestream": "0.1.0",
     "mkdirp": "0.3.5",
     "moment": "2.5.0",
     "ms": "0.6.2"
   },
   "devDependencies": {
-    "gnode": "*",
     "blanket": "*",
     "contributors": "*",
     "coveralls": "*",
+    "gnode": "*",
     "mocha": "*",
     "mocha-lcov-reporter": "*",
     "pedding": "*",
