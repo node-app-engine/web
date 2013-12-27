@@ -42,6 +42,5 @@ if (fs.existsSync(customConfig)) {
 }
 
 mkdirp.sync(config.logdir);
-mkdirp.sync(config.uploadDir);
 
 module.exports = config;

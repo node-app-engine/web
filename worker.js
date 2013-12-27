@@ -14,6 +14,7 @@
  * Module dependencies.
  */
 
+require('gnode');
 var graceful = require('graceful');
 
 var config = require('./config');

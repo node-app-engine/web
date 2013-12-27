@@ -14,6 +14,7 @@
  * Module dependencies.
  */
 
+require('gnode');
 var koa = require('koa');
 var http = require('http');
 
