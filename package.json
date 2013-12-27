@@ -15,7 +15,10 @@
     }
   },
   "dependencies": {
-    "koa": "0.1.2"
+    "gnode": "0.0.5",
+    "graceful": "0.0.5",
+    "koa": "0.1.2",
+    "mkdirp": "0.3.5"
   },
   "devDependencies": {
     "blanket": "*",
@@ -24,7 +27,8 @@
     "mocha": "*",
     "mocha-lcov-reporter": "*",
     "pedding": "*",
-    "should": "*",
+    "should": "2.1.1",
+    "supertest": "0.8.2",
     "travis-cov": "*"
   },
   "homepage": "https://github.com/node-app-engine/web",
@@ -40,6 +44,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/node-app-engine/web/issues"
+  },
+  "engines": {
+    "node": ">= 0.11.9"
   },
   "homepage": "https://github.com/node-app-engine/web"
 }

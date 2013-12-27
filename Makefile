@@ -1,4 +1,4 @@
-TESTS = test/*.test.js
+TESTS = $(shell ls -S `find test -type f -name "*.test.js" -print`)
 REPORTER = spec
 TIMEOUT = 5000
 MOCHA_OPTS =
@@ -8,19 +8,19 @@ install:
 	@$(NPM_INSTALL)
 
 test: install
-	@cd ./examples/connect && $(NPM_INSTALL)
 	@NODE_ENV=test ./node_modules/mocha/bin/mocha \
 		--reporter $(REPORTER) \
 		--timeout $(TIMEOUT) \
+		--require gnode \
 		$(MOCHA_OPTS) \
 		$(TESTS)
 
 test-cov:
-	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=travis-cov
+	@$(MAKE) test MOCHA_OPTS='--require gnode blanket' REPORTER=travis-cov
 
 test-cov-html:
 	@rm -f coverage.html
-	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=html-cov > coverage.html
+	@$(MAKE) test MOCHA_OPTS='--require gnode blanket' REPORTER=html-cov > coverage.html
 	@ls -lh coverage.html
 
 test-coveralls: test

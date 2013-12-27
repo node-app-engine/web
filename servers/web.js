@@ -1,5 +1,5 @@
 /**!
- * nae-web - servers/app.js
+ * nae-web - servers/web.js
  *
  * Copyright(c) nae team and other contributors.
  * MIT Licensed
@@ -20,7 +20,7 @@ var http = require('http');
 var app = koa();
 
 app.use(function *() {
-  this.body = 'Hello World';
+  this.body = 'Hello NAE';
 });
 
-module.exports = http.createServer(app);
+module.exports = http.createServer(app.callback());
