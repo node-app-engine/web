@@ -1,0 +1,45 @@
+{
+  "name": "nae-web",
+  "version": "0.0.0",
+  "description": "nae user ",
+  "main": "dispatch.js",
+  "scripts": {
+    "test": "make test-all"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "//^((?!(node_modules|test)).)*$/"
+    },
+    "travis-cov": {
+      "threshold": 100
+    }
+  },
+  "dependencies": {
+    "koa": "0.1.2"
+  },
+  "devDependencies": {
+    "blanket": "*",
+    "contributors": "*",
+    "coveralls": "*",
+    "mocha": "*",
+    "mocha-lcov-reporter": "*",
+    "pedding": "*",
+    "should": "*",
+    "travis-cov": "*"
+  },
+  "homepage": "https://github.com/node-app-engine/web",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-app-engine/web.git"
+  },
+  "keywords": [
+    "nae",
+    "web"
+  ],
+  "author": "fengmk2 <fengmk2@gmail.com> (http://fengmk2.github.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-app-engine/web/issues"
+  },
+  "homepage": "https://github.com/node-app-engine/web"
+}
