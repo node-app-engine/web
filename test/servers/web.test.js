@@ -30,6 +30,8 @@ describe('servers/web.test.js', function () {
     request(app)
     .get('/')
     .expect(200)
+    .expect('X-Response-Time', /^\d+$/)
+    .expect('X-Powered-By', 'koa')
     .expect('Hello NAE', done);
   });
 });
