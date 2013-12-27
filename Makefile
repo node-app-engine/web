@@ -9,6 +9,7 @@ install:
 
 test: install
 	@NODE_ENV=test ./node_modules/mocha/bin/mocha \
+		--harmony-generators \
 		--reporter $(REPORTER) \
 		--timeout $(TIMEOUT) \
 		--require gnode \
@@ -16,11 +17,11 @@ test: install
 		$(TESTS)
 
 test-cov:
-	@$(MAKE) test MOCHA_OPTS='--require gnode blanket' REPORTER=travis-cov
+	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=travis-cov
 
 test-cov-html:
 	@rm -f coverage.html
-	@$(MAKE) test MOCHA_OPTS='--require gnode blanket' REPORTER=html-cov > coverage.html
+	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=html-cov > coverage.html
 	@ls -lh coverage.html
 
 test-coveralls: test

@@ -14,7 +14,6 @@
  * Module dependencies.
  */
 
-require('gnode');
 var path = require('path');
 var util = require('util');
 var fs = require('fs');

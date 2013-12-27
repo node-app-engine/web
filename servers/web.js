@@ -14,14 +14,24 @@
  * Module dependencies.
  */
 
-require('gnode');
 var koa = require('koa');
 var http = require('http');
+var logger = require('../common/logger');
+var config = require('../config');
 
 var app = koa();
 
+app.name = 'nae-web';
+app.outputErrors = config.debug;
+app.keys = config.cookieKeys;
+app.proxy = true; // to support `X-Forwarded-*` header
+
 app.use(function *() {
   this.body = 'Hello NAE';
+});
+
+app.on('error', function (err) {
+  logger.error(err);
 });
 
 module.exports = http.createServer(app.callback());

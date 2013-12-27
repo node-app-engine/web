@@ -30,6 +30,7 @@ var config = {
   debug: true, // if debug
   logdir: path.join(root, '.tmp', 'logs'),
   viewCache: false,
+  cookieKeys: ['nae-web secret', 'haha other key'],
 };
 
 // load config/config.js, everything in config.js will cover the same key in index.js
