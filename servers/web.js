@@ -21,6 +21,7 @@ var rt = require('koa-rt');
 var favicon = require('koa-favicon');
 var session = require('../common/session');
 var config = require('../config');
+var githubAuth = require('koa-github');
 
 var app = koa();
 
@@ -32,9 +33,13 @@ app.proxy = true; // to support `X-Forwarded-*` header
 app.use(favicon());
 app.use(rt());
 app.use(session);
-
+app.use(githubAuth(config.github));
 app.use(function *handler() {
-  this.body = 'Hello NAE';
+  if (!this.session.githubToken) {
+    this.body = 'Hello NAE, <a href="/github/auth">login with github</a>';
+  } else {
+    this.body = this.session.user;
+  }
 });
 
 app.on('error', function (err) {

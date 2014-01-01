@@ -31,6 +31,13 @@ var config = {
   logdir: path.join(root, '.tmp', 'logs'),
   viewCache: false,
   cookieKeys: ['nae-web secret', 'haha other key'],
+  github: {
+    clientID: '5ec1d25d2a3baf99a03c',
+    clientSecret: '513607494a244e2759738cae3d50a89494c1e7f0',
+    callbackURL: 'http://localhost:7001',
+    userKey: 'user',
+    timeout: 10000
+  },
 };
 
 // load config/config.js, everything in config.js will cover the same key in index.js

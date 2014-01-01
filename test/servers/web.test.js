@@ -32,6 +32,11 @@ describe('servers/web.test.js', function () {
     .expect(200)
     .expect('X-Response-Time', /^\d+$/)
     .expect('X-Powered-By', 'koa')
-    .expect('Hello NAE', done);
+    .expect(/Hello NAE/, done);
+  });
+  it('should auth 302', function (done) {
+    request(app)
+    .get('/github/auth')
+    .expect(302, done);
   });
 });
