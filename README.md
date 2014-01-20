@@ -9,7 +9,9 @@ nae-web
 
 ## Node App Engine
 
-![nae](https://docs.google.com/drawings/d/1BFJXaQCfXqPfMn_aTLPUVpsS8Bl7xTIGeL0KVPXfcKo/pub?w=960&h=720)
+![architecture](https://docs.google.com/drawings/d/1BFJXaQCfXqPfMn_aTLPUVpsS8Bl7xTIGeL0KVPXfcKo/pub?w=960&h=720)
+
+* [HeroKu Architecture](http://www.slideshare.net/yinhm/heroku-4428760), [Chinese](http://dbanotes.net/arch/heroku_architecture.html)
 
 ## Install
 
