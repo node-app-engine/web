@@ -19,7 +19,7 @@
     "co-github": "0.0.1",
     "github": "0.1.12",
     "graceful": "0.0.5",
-    "koa": "0.2.1",
+    "koa": "0.6.1",
     "koa-favicon": "1.0.1",
     "koa-github": "0.0.2",
     "koa-redis": "0.0.2",
